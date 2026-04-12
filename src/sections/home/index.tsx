@@ -9,11 +9,11 @@ const Home = () => {
         </h1>
 
         <h2 className="text-5xl text-gray-400">
-        frase
+        I build things for the web.
         </h2>
 
         <p className="max-w-xl text-gray-400">
-        texto
+        “ Sempre melhor que o eu mesmo de ontem ”
         </p>
     </section>
   )
