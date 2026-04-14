@@ -5,7 +5,7 @@ import React from '../../assets/logos/react.svg'
 const Projects = () => {
   return (
     <section id='projects' className='flex flex-col py-25 gap-10'>
-        <h1 className='text-2xl font-semibold'>Projetos Acadêmicos</h1>
+        <h1 className='text-3xl font-bold'>Projetos Acadêmicos</h1>
         <ul>
             <li>
                 <article className='flex gap-20'>
