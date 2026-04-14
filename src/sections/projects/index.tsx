@@ -9,9 +9,8 @@ const Projects = () => {
         <ul>
             <li>
                 <article className='flex gap-20'>
-                    <div>
-                        <h2 className='text-lg font-medium h-6'>LuxAI</h2>
-                        <span className='flex w-4 h-px bg-green-400'/>
+                    <div className='flex flex-col gap-4'>
+                        <h2 className='relative text-lg font-medium h-6 after:absolute after:w-4 after:h-0.5 after:left-0 after:-bottom-1 after:bg-green-400'>LuxAI</h2>
                         <div className='w-2xs flex flex-col gap-6'>
                             <p>O contexto desse problema advém de otimizações de processos com IA</p>
                             <p>Visto que aplicações com intuito de organizar a vida financeira contém etapas e muitas vezes decisões passam despercebidas no momento da contabilidade, a IA encaixaria para tomada decisões e organização facilitadas da vida do usuário.</p>
