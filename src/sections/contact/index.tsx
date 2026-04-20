@@ -3,10 +3,10 @@ import { useCopyText } from '../../hooks/useCopyText'
 
 const Contact = () => {
 
-  const {copy, copiedId} = useCopyText(5000)
+  const {copy, copiedId} = useCopyText(2000)
 
   return (
-    <section id='contact' className='flex flex-col py-25 gap-16'>
+    <section id='contact' className='flex flex-col py-20 sm:py-24 gap-12'>
       <header className="text-center lg:text-left">
         <h2 className="text-3xl font-bold">Contato</h2>
       </header>
@@ -64,6 +64,12 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/fernando-cruz-cavina/" target='_blank' rel='noreferrer' aria-label='Linkedin do Fernando'>
                 <svg role='img' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className=''><title>Linkedin</title><path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="#0A66C2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9H2V21H6V9Z" stroke="#0A66C2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="#0A66C2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
+            </li>
+          </ul>
+          <ul className='flex sm:flex-col w-12 gap-6'>
+            <li className='px-2 py-1 hover:bg-gray-700 rounded-sm cursor-pointer'>
+              <a href="https://www.linkedin.com/in/fernando-cruz-cavina/" target='_blank' rel='noreferrer' aria-label='Linkedin do Fernando'>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill='#25D366'><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
             </li>
           </ul>
         </address>

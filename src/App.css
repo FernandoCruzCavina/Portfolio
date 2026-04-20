@@ -44,3 +44,16 @@ html {
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+.background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.blob {
+  background: linear-gradient(135deg, #7b61ff, #00d4ff);
+  clip-path: polygon(30% 0%, 70% 10%, 100% 50%, 80% 100%, 20% 90%, 0% 50%);
+  filter: blur(120px);
+  opacity: 0.7;
+}

@@ -3,7 +3,7 @@ import UniversityIcon from '../../assets/logos/uam.svg'
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4 max-w-6xl mx-auto flex flex-col gap-16">
+    <section id="about" className="py-20 px-4 max-w-6xl mx-auto flex flex-col sm:py-24 gap-12 scroll-mt-24">
       <header className="text-center lg:text-left">
         <h2 className="text-3xl font-bold">Sobre mim</h2>
       </header>
@@ -27,7 +27,7 @@ const About = () => {
             Busco minha primeira oportunidade como desenvolvedor <span className="text-green-400 font-medium">backend</span> ou{' '}
             <span className="text-green-400 font-medium">fullstack</span>, 
             contribuindo com soluções escaláveis e boas práticas de engenharia.
-            Tendo as seguintes noções de:
+            Confira as minhas seguintes noções de:
           </p>
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6'>
             <ul className='flex flex-col gap-3'>
@@ -77,6 +77,7 @@ const About = () => {
             <img
               src={ProfilePhoto}
               alt="Foto de Fernando Cruz Cavina"
+              fetchPriority='high'
               className="w-40 h-40 object-cover rounded-full border-4 border-green-400 shadow-lg shadow-green-800"
             />
             <figcaption className="font-semibold text-center">
