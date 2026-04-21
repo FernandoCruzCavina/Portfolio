@@ -8,11 +8,11 @@ const Projects = () => {
             <h2 className="text-4xl font-bold tracking-tight">Projetos Acadêmicos</h2>
         </header>
 
-        <div className='flex flex-col gap-32'>
+        <ul className='flex flex-col gap-32'>
             {projects.map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index} />
             ))}
-        </div>
+        </ul>
     </section>
   )
 }

@@ -83,12 +83,15 @@ const About = () => {
             <figcaption className="font-semibold text-center">
               Fernando Cruz Cavina
             </figcaption>
+            <figcaption className="font-regular text-sm text-gray-300 text-center">
+              Estudante de Ciência da Computação
+            </figcaption>
           </figure>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
             <li className="p-4 border border-green-400/60 bg-green-400/5 rounded-xl flex flex-col gap-4">
               <img
                 src={UniversityIcon}
-                alt="Universidade Anhembi Morumbi"
+                alt="Universidade"
                 className=""
               />
               <dl className="space-y-2">
