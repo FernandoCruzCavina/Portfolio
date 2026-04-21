@@ -72,7 +72,7 @@ export default function SkillsSection() {
                             className="w-36 h-48 object-cover rounded-lg"
                           />
 
-                          <div className="absolute inset-0 bg-teal-400/50 opacity-100
+                          <div className="absolute inset-0 bg-green-400/40 opacity-100
                             group-hover:opacity-0 transition duration-300 rounded-lg"
                           />
                         </div>

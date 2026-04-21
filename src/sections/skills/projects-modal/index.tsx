@@ -78,6 +78,7 @@ const ProjectsModal = ({selectedProject, setSelectedProject}: ProjectModalProps)
                         href={selectedProject.repo}
                         target="_blank"
                         className="px-4 py-2 bg-white/10 rounded-lg"
+                        rel="noopener noreferrer"
                         >
                         GitHub
                         </a>
@@ -88,6 +89,7 @@ const ProjectsModal = ({selectedProject, setSelectedProject}: ProjectModalProps)
                         href={selectedProject.live}
                         target="_blank"
                         className="px-4 py-2 bg-teal-500 text-black rounded-lg"
+                        rel="noopener noreferrer"
                         >
                         Ver Projeto
                         </a>

@@ -1,81 +1,68 @@
-import { Check, Mail, MapPin, Phone } from 'lucide-react'
-import { useCopyText } from '../../hooks/useCopyText'
+import { Check } from 'lucide-react';
+import { useCopyText } from '../../hooks/useCopyText';
+import { contact, contactWithLink } from './constant';
 
 const Contact = () => {
+    const { copy, copiedId } = useCopyText(2000);
 
-  const {copy, copiedId} = useCopyText(2000)
+    return (
+        <section id='contact' className='flex flex-col py-20 sm:py-24 gap-12 max-w-6xl mx-auto px-4'>
+            <header className="text-center lg:text-left">
+                <h2 className="text-4xl font-bold tracking-tight">Contato</h2>
+            </header>
 
-  return (
-    <section id='contact' className='flex flex-col py-20 sm:py-24 gap-12'>
-      <header className="text-center lg:text-left">
-        <h2 className="text-3xl font-bold">Contato</h2>
-      </header>
-      <div className='flex flex-col lg:flex-row gap-16'>
-        <div className='flex flex-col max-w-140 gap-10'>
-          <p>Estou aberto a novos aprendizados mesmo que não sejam como programador, porque acredito que cada experiência agrega na minha pessoa e no meu trabalho.</p>
-          <a className='w-fit relative overflow-hidden border-2 border-green-400 px-4 py-2 text-green-400 hover:text-green-700 hover:border-green-700
-            after:absolute after:left-0 after:top-0 after:w-0 after:h-full after:bg-green-300 after:transition-all after:duration-300 after:ease-out hover:after:w-full after:z-0' 
-            href='mailto:fernando.cc.dev@gmail.com' aria-label='Gmail do Fernando'>
-              <span className='relative z-10'>Enviar Email</span>
-          </a>
-        </div>
-        <address className='flex flex-col sm:flex-row justify-between gap-8 max-w-130 not-italic'>
-          <ul className='flex flex-col w-full max-w-69 gap-5'>
-            <li>
-              <button className='flex gap-2 px-3 py-2 hover:bg-gray-700 rounded-sm cursor-pointer' onClick={() => copy("São Paulo, SP, Brasil", "local")}><MapPin />
-              {copiedId === 'local' ? (
-                <span className='flex text-green-400 gap-1'><Check/> Copiado!</span>
-              ):(
-                'São Paulo, SP, Brasil'
-              )}
-              </button>
-            </li>
-            <li>
-              <button className='flex gap-2 px-3 py-2 hover:bg-gray-700 rounded-sm cursor-pointer' onClick={() => copy("+55 (11) 95067-2602", "phone")}><Phone />
-              {copiedId === 'phone' ? (
-                <span className='flex text-green-400 gap-1'><Check/> Copiado!</span>
-              ):(
-                '+55 (11) 95067-2602'
-              )}
-              </button>
-            </li>
-            <li>
-              <button className='flex gap-2 px-3 py-2 hover:bg-gray-700 rounded-sm cursor-pointer' onClick={() => copy("fernando.cc.dev@gmail.com", "gmail")}><Mail />
-              {copiedId === 'gmail' ? (
-                <span className='flex text-green-400 gap-1'><Check/> Copiado!</span>
-              ):(
-                'fernando.cc.dev@gmail.com'
-              )}
-              </button>
-            </li>
-          </ul>
-          <ul className='flex sm:flex-col w-12 gap-6'>
-            <li className='px-2 py-1 hover:bg-gray-700 rounded-sm cursor-pointer'>
-              <a href="https://github.com/fernandocruzcavina" target='_blank' rel='noreferrer' aria-label='Github do Fernando'>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className='fill-white '><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              </a>
-            </li>
-            <li className='px-2 py-1 hover:bg-gray-700 rounded-sm cursor-pointer'>
-              <a href="https://leetcode.com/u/fernando-cruz-cavina/" target='_blank' rel='noreferrer' aria-label='Leetcode do Fernando'>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className='fill-[#FFA116]'><title>LeetCode</title><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
-              </a>
-            </li>
-            <li className='px-2 py-1 hover:bg-gray-700 rounded-sm cursor-pointer'>
-              <a href="https://www.linkedin.com/in/fernando-cruz-cavina/" target='_blank' rel='noreferrer' aria-label='Linkedin do Fernando'>
-                <svg role='img' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className=''><title>Linkedin</title><path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="#0A66C2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9H2V21H6V9Z" stroke="#0A66C2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="#0A66C2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </li>
-          </ul>
-          <ul className='flex sm:flex-col w-12 gap-6'>
-            <li className='px-2 py-1 hover:bg-gray-700 rounded-sm cursor-pointer'>
-              <a href="https://www.linkedin.com/in/fernando-cruz-cavina/" target='_blank' rel='noreferrer' aria-label='Linkedin do Fernando'>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill='#25D366'><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
-            </li>
-          </ul>
-        </address>
-      </div>
-    </section>
-  )
+            <div className='flex flex-col lg:flex-row gap-16 justify-between'>
+                <div className='flex flex-col max-w-xl gap-8'>
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                        Estou aberto a novos aprendizados e oportunidades. Acredito que cada experiência 
+                        agrega valor tanto ao crescimento pessoal quanto profissional.
+                    </p>
+                    
+                    <a 
+                        className='group relative w-fit px-8 py-3 font-medium text-green-400 border-2 border-green-400 overflow-hidden transition-colors duration-300 hover:text-gray-900'
+                        href='mailto:fernando.cc.dev@gmail.com'
+                    >
+                        <span className='relative z-10'>Enviar Email</span>
+                        <div className='absolute inset-0 bg-green-400 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 ease-out' />
+                    </a>
+                </div>
+
+                <address className='flex flex-col sm:flex-row gap-6 not-italic'>
+
+                    <ul className='flex flex-col gap-4'>
+                        {contact.map((item) => (
+                        <li key={item.id}>
+                            <button 
+                            onClick={() => copy(item.value, item.id)}
+                            className='flex items-center gap-3 px-4 py-2 w-full hover:bg-white/5 rounded-md transition-colors group cursor-pointer'
+                            aria-label={`Copiar ${item.id}`}
+                            >
+                                <span className="text-green-400 group-hover:scale-110 transition-transform">
+                                    {copiedId === item.id ? <Check size={20} /> : item.icon}
+                                </span>
+                                <span className={copiedId === item.id ? 'text-green-400' : 'text-gray-300 group-hover:text-gray-200'}>
+                                    {copiedId === item.id ? 'Copiado!' : item.label}
+                                </span>
+                            </button>
+                        </li>
+                        ))}
+                    </ul>
+
+                    <div className="hidden sm:block w-0.5 bg-gray-800 self-stretch"></div>
+
+                    <ul className='flex sm:flex-col w-10 h-10 gap-6'>
+                        {contactWithLink.map(contact => (
+                            <li className='px-2 py-1 hover:bg-white/5 rounded-md cursor-pointer group'>
+                                <a href={`${contact.link}`} target='_blank' rel='noreferrer' aria-label={`${contact.name} do Fernando`}>
+                                    {contact.icon}   
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </address>
+            </div>
+        </section>
+    )
 }
 
 export default Contact
