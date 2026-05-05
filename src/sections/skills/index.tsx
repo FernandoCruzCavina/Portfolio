@@ -39,6 +39,7 @@ export default function SkillsSection() {
                             "cursor-pointer hover:-translate-y-2":
                             "cursor-default"
                           }`}
+                          aria-label="Ver projetos dessa stack"
                         >
                           <div className="text-2xl text-green-400 group-hover:text-green-500 mb-1 transition">
                             {skill.icon}
@@ -56,23 +57,25 @@ export default function SkillsSection() {
               <li className="bg-[#1a1a1a] overflow-hidden p-5 rounded-2xl border border-white/5 col-span-1 sm:col-span-2 lg:col-span-3">
                 <h3 className="text-lg font-semibold mb-4">Leituras</h3>
 
-                <ul className="flex overflow-hidden overflow-x-auto sm:flex-none sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <ul className="flex overflow-hidden overflow-x-auto sm:flex-none sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-4">
                   {books.map((book) => (
                     <li>
                       <button
                         key={book.title}
                         onClick={() => setSelectedBook(book)}
                         className="w-36 cursor-pointer group"
+                        aria-label="Ver livro"
+                        title="Ver livro"
                       >
                         <div className="relative">
                           <img
                             src={book.image}
-                            alt={book.title}
+                            alt={`${book.title} Book`}
                             loading="lazy"
                             className="w-36 h-48 object-cover rounded-lg"
                           />
 
-                          <div className="absolute inset-0 bg-green-400/40 opacity-100
+                          <div className="absolute inset-0 bg-green-600/40 opacity-100
                             group-hover:opacity-0 transition duration-300 rounded-lg"
                           />
                         </div>

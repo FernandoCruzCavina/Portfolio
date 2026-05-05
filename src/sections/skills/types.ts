@@ -5,6 +5,7 @@ export const CATEGORIES = {
   SOCIAL: "Social",
   ESTUDO: "Estudo",
   MARKETING: "Marketing",
+  ARTIGO: "Artigo",
 } as const;
 
 type Project = {
@@ -15,7 +16,7 @@ type Project = {
   description: string;
   longDescription: string;
   stack: string[];
-  type: "Website" | "Aplicativo";
+  platform: "Website" | "Aplicativo" | "Artigo";
   images: string[];
   repo?: string;
   live?: string;

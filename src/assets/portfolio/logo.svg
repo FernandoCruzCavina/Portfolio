@@ -1,0 +1,43 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="musicGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFB2"/>
+      <stop offset="100%" stop-color="#00C853"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo -->
+  <rect x="0" y="0" width="64" height="64" fill="url(#musicGreen)"/>
+
+  <!-- Nota -->
+  <path 
+    d="M34 14 
+       L34 42 
+       Q34 50 26 52 
+       Q18 54 18 46 
+       Q18 40 30 38"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <!-- F -->
+  <path 
+    d="M34 14 
+       Q46 14 52 10"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+  <path 
+    d="M34 25 
+       Q44 25 50 20"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+</svg>

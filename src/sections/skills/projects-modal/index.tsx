@@ -5,7 +5,7 @@ import ReactDom from 'react-dom'
 
 interface ProjectModalProps {
     selectedProject: Project,
-    setSelectedProject: React.Dispatch<React.SetStateAction<Project>>
+    setSelectedProject: React.Dispatch<React.SetStateAction<Project | null>>
 }
 
 const ProjectsModal = ({selectedProject, setSelectedProject}: ProjectModalProps) => {
@@ -27,7 +27,7 @@ const ProjectsModal = ({selectedProject, setSelectedProject}: ProjectModalProps)
                     }}
                     className="group cursor-pointer"
                 >
-                    <X className='text-gray-400 group-hover:text-teal-400 group-hover:rotate-90 transition ease-in'/>
+                    <X className='text-gray-400 group-hover:text-teal-400 transition ease-in'/>
                 </button>
                 </div>
 
@@ -58,7 +58,7 @@ const ProjectsModal = ({selectedProject, setSelectedProject}: ProjectModalProps)
                 </p>
 
                 <p className="text-sm text-gray-400 mb-4">
-                    Tipo: {selectedProject.type}
+                    Tipo: {selectedProject.platform}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">

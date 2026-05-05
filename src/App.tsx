@@ -6,7 +6,7 @@ import Contact from './sections/contact'
 import Skills from './sections/skills'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
-import { SiGithub, SiGmail, SiLeetcode } from 'react-icons/si'
+import { SiGithub, SiGmail, SiLeetcode, SiWhatsapp } from 'react-icons/si'
 import { FaLinkedinIn } from 'react-icons/fa'
 function App() {
   const [isOpenNav, setIsOpenNav] = useState(false)
@@ -53,6 +53,9 @@ function App() {
           <a className="p-2 cursor-pointer group" href='https://github.com/fernandocruzcavina' target='_blank' rel='noreferrer' aria-label='Github do Fernando'>
             <SiGithub className='size-6 fill-white transition group-hover:fill-green-400 group-hover:-translate-y-2' title='Github' />  
           </a>
+          <a className="p-2 cursor-pointer group" href='https://wa.me/5511950672602?text=Oi%2C%20vi%20seu%20Portif%C3%B3lio%20e%20fiquei%20interessado%20no%20seu%20trabalho.' target='_blank' rel='noreferrer' aria-label='WhatsApp do Fernando'>
+            <SiWhatsapp className='size-6 fill-white transition group-hover:fill-green-400 group-hover:-translate-y-2' title='WhatsApp' />  
+          </a>
           <a className="p-2 cursor-pointer group" href="https://leetcode.com/u/fernando-cruz-cavina/" target='_blank' rel='noreferrer' aria-label='Leetcode do Fernando'>
             <SiLeetcode className='size-6 fill-white transition group-hover:fill-green-400 group-hover:-translate-y-2' title='Leetcode' />
           </a>
@@ -66,7 +69,7 @@ function App() {
       <div className="w-px h-24 bg-gray-500"></div>
       </aside>
       <aside className="hidden min-[1150px]:flex flex-col fixed bottom-0 right-8 items-center gap-y-4 z-10">
-        <p className="rotate-90 w-5 text-sm tracking-widest ">
+        <p className="text-white rotate-90 w-5 text-sm tracking-widest ">
           fernando.cc.dev@email.com
         </p>
         <div className="w-px h-24 bg-gray-500 mt-54"></div>
@@ -81,9 +84,9 @@ function App() {
       <footer className='text-gray-400'>
         <div className=' flex flex-col items-center justify-center gap-0.5 py-3'>
           <p>
-            Construído por Fernando Cruz Cavina
+            Construído por Fernando Cruz Cavina.
           </p>
-          <p className='text-gray-500 text-center'>
+          <p className='text-center'>
             Design feito no Figma e Deploy feito pelo Vercel. Obrigado pelo serviço!
           </p>
         </div>

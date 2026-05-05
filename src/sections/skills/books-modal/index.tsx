@@ -3,7 +3,7 @@ import type { Book } from "../types"
 
 interface BookModal {
     selectedBook: Book
-    setSelectedBook:  React.Dispatch<React.SetStateAction<Book>>
+    setSelectedBook:  React.Dispatch<React.SetStateAction<Book | null>>
 }
 
 const BookModal = ({selectedBook, setSelectedBook} : BookModal) => {
